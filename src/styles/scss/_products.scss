@@ -1,0 +1,91 @@
+.image-carousel {
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+	padding: 15px 10px;
+	border-radius: 10px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 10px;
+	}
+
+	button {
+		position: relative;
+		outline: 0;
+		z-index: 91;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: none;
+		border: 0;
+
+		&.btt {
+			position: absolute;
+			top: 40%;
+			background: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+			height: 30px;
+			width: 30px;
+		}
+
+		&.prev {
+			left: 10px;
+		}
+		&.next {
+			right: 10px;
+		}
+	}
+
+	.slides {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: center;
+
+		span {
+			background: rgba(255, 255, 255, 0.6);
+			display: inline-block;
+			height: 5px;
+			width: 5px;
+			border-radius: 50%;
+			margin-right: 4px;
+			margin-left: 4px;
+			cursor: pointer;
+
+			&.active {
+				background: #fff;
+			}
+		}
+	}
+}
+
+.house-content {
+	padding-top: 10px;
+	color: $text-color;
+	b {
+		font-size: 0.9rem;
+		color: #000;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+	}
+
+	span {
+		&.b {
+			color: #000;
+		}
+	}
+}
